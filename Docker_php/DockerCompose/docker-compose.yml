@@ -1,0 +1,45 @@
+    name: online-examination
+    services:
+      db:
+          container_name: db-instance
+          image: mysql
+          restart: always
+          environment:
+              MYSQL_ROOT_PASSWORD: Toronto123
+              MYSQL_DATABASE: project
+              MYSQL_USER: admin12
+              MYSQL_PASSWORD: Toronto123
+          volumes:
+            - v_phpmysql:/var/lib/mysql
+            - "./sqlscripts/1.sql:/docker-entrypoint-initdb.d/1.sql"
+            - "./sqlscripts/2.sql:/docker-entrypoint-initdb.d/2.sql"
+          ports:
+              - "3306:3306"
+          networks:
+            app-network:
+              ipv4_address: 10.10.0.2
+
+      webapp:
+        container_name: php-instance
+        image: php-online-examination-app:latest
+        environment:
+          MYSQL_HOST: "10.10.0.2"
+          MYSQL_ROOT_PASSWORD: Toronto123
+          MYSQL_DB_NAME: project
+        ports:
+              - "8080:80"
+        networks:
+          app-network:
+                ipv4_address: 10.10.0.3
+        depends_on:
+          - db
+    
+    volumes:
+      v_phpmysql:
+
+    networks:
+      app-network:
+        driver: bridge
+        ipam:
+          config:
+            - subnet: 10.10.0.0/16
