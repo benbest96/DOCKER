@@ -1,16 +1,18 @@
 # Docker compose
 
-## Exemple
+## Example
 docker build -t php-online-examination-app:latest .
 
-## Votre image
-docker build -t <nom_de_image> : < tag > .
+## Your image
+docker build -t <name_of_your_image> : < tag > .
 
-## Déployer avec docker compose
+## Deploy with docker compose
 
 docker compose up
 
-docker compose down
+## to stop the container
+
+docker compose down 
 
 
 docker compose -f docker-compose-1.yml up
