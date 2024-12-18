@@ -1,0 +1,19 @@
+name: WebApp Test
+
+services:
+  loadbalancer:
+    image: haproxy
+    volumes:
+      - ./haproxy_cfg/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+    ports:
+      - 8090:80
+    
+    depends_on:
+      - web01
+      - web02
+      - web03
+
+  front_web:
+    image: httpd
+    environment:
+      - HOST_NAME=TEST001
