@@ -1,6 +1,8 @@
 PHP Application with Load Balancer using Docker Compose
 ---------------------------------------------------------------------------------------------------
-This project demonstrates how to build a high-availability PHP application environment using Docker. It utilizes a PHP base image, creates a containerized application, and manages traffic with HAProxy as the load balancer. The setup includes three application nodes to ensure redundancy and high availability.
+This project demonstrates how to build a high-availability PHP application environment using Docker. 
+It utilizes a PHP base image, creates a containerized application, and manages traffic with HAProxy as the load balancer. 
+The setup includes three application nodes to ensure redundancy and high availability.
 
 ----------------Features------------
 PHP Application: Built from the official PHP Docker image.
@@ -22,5 +24,4 @@ Create a directory named php-app and add your HTML/PHP application files (e.g., 
 
 3. Prepare the HAProxy Configuration
 Create an haproxy.cfg file in your project directory to configure the load balancer.
-
 Example haproxy.cfg:
