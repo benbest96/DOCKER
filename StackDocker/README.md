@@ -1,17 +1,3 @@
-# ARCHIVED
-
-This project is no longer maintained. For alternative getting started
-experiences, you may want to try one of these options:
-
-- Start a
-  [free trial on Elastic Cloud](https://www.elastic.co/cloud/elasticsearch-service/signup),
-  our hosted service.
-- Read our
-  [Running the Elastic Stack on Docker](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html)
-  guide.
-- Take a look at [our Helm charts](https://github.com/elastic/helm-charts) for
-  launching the stack via Kubernetes.
-
 # stack-docker
 This example Docker Compose configuration demonstrates many components of the
 Elastic Stack, all running on a single machine under Docker.
@@ -22,13 +8,13 @@ Elastic Stack, all running on a single machine under Docker.
 with Docker for Windows/Mac.
 
   * Linux users can read the [install instructions](https://docs.docker.com/compose/install/#install-compose) or can install via pip:
-```
+
 pip install docker-compose
-```
+
 
 * Windows Users must set the following 2 ENV vars:
-  * `COMPOSE_CONVERT_WINDOWS_PATHS=1`
-  * `PWD=/path/to/checkout/for/stack-docker`
+  * COMPOSE_CONVERT_WINDOWS_PATHS=1
+  * PWD=/path/to/checkout/for/stack-docker
     * for example I use the path: `/c/Users/nick/elastic/stack-docker`
     * Note: you're paths must be in the form of `/c/path/to/place` using `C:\path\to\place` will not work
   * You can set these two ways:
