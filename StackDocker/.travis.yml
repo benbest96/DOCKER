@@ -1,6 +1,6 @@
 ---
-language: python
-python: ['3.5']
+language: python 
+python: ['3.5'] #You can replace regarding the version you have
 script: make
 
 sudo: required
