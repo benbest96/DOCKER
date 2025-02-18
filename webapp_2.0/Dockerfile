@@ -1,7 +1,7 @@
 # Use the official image
 FROM nginx:latest
 
-# Copy the custom HTML file to the default nginx directory
+# Copy your html code to the default nginx directory
 COPY index.html /usr/share/nginx/html/index.html
 
 # Port exposed

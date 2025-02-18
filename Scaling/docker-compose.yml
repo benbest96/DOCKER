@@ -6,7 +6,7 @@ services:
     volumes:
       - ./haproxy_cfg/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
     ports:
-      - 8090:80
+      - 8080:80
     
     depends_on:
       - web01
@@ -17,3 +17,4 @@ services:
     image: httpd
     environment:
       - HOST_NAME=TEST001
+  

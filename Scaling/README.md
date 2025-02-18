@@ -1,7 +1,7 @@
 # Docker compose scalling
 
 ```yaml
-## exemple docker-compose.yaml
+## exemple of docker-compose.yaml
 services:
   frontend:
     image: httpd
@@ -15,7 +15,7 @@ docker compose up -d
 ```
 
 
-pour augmenter le nombre de conteneurs, utilisez la commande ci-dessous :
+Adding the number of containers, use this following command :
 
 ```bash
 # Scale up to 5 containers
