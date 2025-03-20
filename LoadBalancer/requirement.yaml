@@ -1,0 +1,5 @@
+---
+roles:
+  - name: masterb3.firewall
+  - name: masterb3.haproxy
+  - name: masterb3.apache
